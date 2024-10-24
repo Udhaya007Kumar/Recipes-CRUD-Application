@@ -83,8 +83,8 @@ export const getrecipes = async (req, res) => {
         if(!result){
             return res.status(404).json({ message: "Recepie Not Found" });
         } 
-        const recipes = await recipes.find();
-        res.status(200).json({message:"Recipes deleted", data:recipes})
+        const recipe = await recipes.find();
+        res.status(200).json({message:"Recipes deleted", data:recipe})
         
       } catch (error) {
         res
